@@ -750,13 +750,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="projects">
   <div class="section-inner">
     <p class="section-label">Projects</p>
-    <h2 class="section-title">주요 프로젝트 <span>7</span></h2>
+    <h2 class="section-title">주요 프로젝트 <span>8</span></h2>
 
     <div class="project-filter">
       <button class="filter-btn active" data-filter="all">전체</button>
       <button class="filter-btn" data-filter="performance">퍼포먼스</button>
       <button class="filter-btn" data-filter="crm">CRM</button>
       <button class="filter-btn" data-filter="analytics">웹·애널리틱스</button>
+      <button class="filter-btn" data-filter="owned">온드미디어</button>
     </div>
 
     <div class="project-grid">
@@ -796,7 +797,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="par-content">동기간 전년도 대비<br /><strong style="color:var(--blue)">DAU 126% ▲ / CPA 39% ▼ / CVR 15% ▲</strong></div>
             </div>
           </div>
-          <div class="project-tools">
+          <!-- 대시보드 구조 시각화 -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">Dashboard Structure</p>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;">
+              <div style="background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-size:18px;margin-bottom:4px;">📱</div>
+                <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:4px;">앱 내부 지표</div>
+                <div style="font-size:10px;color:var(--text-light);line-height:1.5;">MAU / DAU / NRU<br/>D+1·7 재방문율<br/>전환율 (AOS/iOS)</div>
+              </div>
+              <div style="background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-size:18px;margin-bottom:4px;">📊</div>
+                <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:4px;">매체 지표</div>
+                <div style="font-size:10px;color:var(--text-light);line-height:1.5;">매체별 CPI / CPA<br/>노출·클릭·전환<br/>ROAS 비교</div>
+              </div>
+              <div style="background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:10px;padding:12px;text-align:center;">
+                <div style="font-size:18px;margin-bottom:4px;">🔁</div>
+                <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:4px;">Appsflyer 연동</div>
+                <div style="font-size:10px;color:var(--text-light);line-height:1.5;">MMP 기반 매체 비교<br/>유저 퀄리티 추적<br/>고효율 매체 선별</div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/11mwQxfIzwRCLDfNF2YOz21saX_2GljFTM76BKFSun84/edit?usp=sharing" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;transition:background 0.2s;"
+              onmouseover="this.style.background='var(--blue-dark)'" onmouseout="this.style.background='var(--blue)'">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              매체 통합 대시보드 보기 →
+            </a>
+          </div>
+          <div class="project-tools" style="margin-top:14px;">
             <span class="tag tag-gray">Appsflyer</span><span class="tag tag-gray">Meta Ads</span><span class="tag tag-gray">Google Ads</span><span class="tag tag-gray">TikTok Ads</span><span class="tag tag-gray">Naver SA</span><span class="tag tag-gray">GA</span><span class="tag tag-gray">Spreadsheet</span>
           </div>
         </div>
@@ -893,7 +921,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="par-content">월평균 기준 3개월 비교<br /><strong style="color:var(--blue)">순매출 210% ▲</strong></div>
             </div>
           </div>
-          <div class="project-tools">
+          <!-- 월별 매출 성장 시각화 (실제 데이터 기반 / 금액 미노출) -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:4px;">월별 순매출 성장 추이</p>
+            <p style="font-size:11px;color:var(--text-light);margin-bottom:14px;">5~7월 평균 대비 8~10월 평균 비교 · 금액 미표기 / 상대 지수로 표현</p>
+
+            <!-- 막대 차트 -->
+            <div style="display:flex;align-items:flex-end;gap:6px;height:110px;padding:0 4px;position:relative;">
+
+            <!-- 5월: 기준 -->
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;">
+                <div style="width:100%;background:#BFDBFE;border-radius:4px 4px 0 0;height:28px;"></div>
+                <div style="font-size:10px;color:var(--text-light);font-weight:600;">5월</div>
+                <div style="font-size:9px;color:var(--text-light);">기준</div>
+                <div style="font-size:9px;color:var(--blue);font-weight:600;">Before</div>
+              </div>
+              <!-- 6월: +15% -->
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;">
+                <div style="width:100%;background:#93C5FD;border-radius:4px 4px 0 0;height:32px;"></div>
+                <div style="font-size:10px;color:var(--text-light);font-weight:600;">6월</div>
+                <div style="font-size:9px;color:var(--text-mid);">+15%</div>
+                <div style="font-size:9px;color:var(--blue);font-weight:600;">Before</div>
+              </div>
+
+              <!-- 구분선 -->
+              <div style="width:2px;background:var(--blue);opacity:0.35;border-radius:2px;align-self:stretch;z-index:2;flex-shrink:0;"></div>
+
+              <!-- 8월: +179% -->
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;">
+                <div style="width:100%;background:#60A5FA;border-radius:4px 4px 0 0;height:75px;"></div>
+                <div style="font-size:10px;color:var(--text-light);font-weight:600;">8월</div>
+                <div style="font-size:9px;color:var(--blue);font-weight:700;">+179%</div>
+                <div style="font-size:9px;color:#fff;background:var(--blue);border-radius:3px;padding:0 4px;font-weight:600;">After</div>
+              </div>
+              <!-- 9월: +225% -->
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;">
+                <div style="width:100%;background:#2563EB;border-radius:4px 4px 0 0;height:95px;"></div>
+                <div style="font-size:10px;color:var(--text-light);font-weight:600;">9월</div>
+                <div style="font-size:9px;color:var(--blue);font-weight:700;">+225%</div>
+                <div style="font-size:9px;color:#fff;background:var(--blue);border-radius:3px;padding:0 4px;font-weight:600;">After</div>
+              </div>
+              <!-- 10월: +209% -->
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:1;">
+                <div style="width:100%;background:#1D4ED8;border-radius:4px 4px 0 0;height:110px;"></div>
+                <div style="font-size:10px;color:var(--text-light);font-weight:600;">10월</div>
+                <div style="font-size:9px;color:#1D4ED8;font-weight:700;">+209%</div>
+                <div style="font-size:9px;color:#fff;background:var(--blue);border-radius:3px;padding:0 4px;font-weight:600;">After</div>
+              </div>
+            </div>
+
+            <!-- Before / After 평균 비교 -->
+            <div style="display:flex;gap:8px;margin-top:14px;align-items:center;">
+              <div style="flex:1;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center;">
+                <div style="font-size:10px;color:var(--text-light);margin-bottom:4px;">Before 월평균 (5~6월)</div>
+                <div style="font-size:18px;font-weight:800;color:var(--text-mid);">기준</div>
+              </div>
+              <div style="font-size:20px;color:var(--blue);">→</div>
+              <div style="flex:1;background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:8px;padding:10px;text-align:center;">
+                <div style="font-size:10px;color:var(--blue);margin-bottom:4px;">After 월평균 (8~10월)</div>
+                <div style="font-size:18px;font-weight:800;color:var(--blue);">+210%</div>
+              </div>
+            </div>
+
+            <div style="border-top:1px solid var(--border);padding-top:10px;margin-top:12px;">
+              <span style="font-size:11px;color:var(--text-light);">💡 광고비 최적화(ROAS 기반 재배분) + 카카오 CRM 도입 + 전환 허들 제거 동시 진행</span>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="https://docs.google.com/spreadsheets/d/1L8mchPC6kiqrqq1sKwRlIRgvg6vx0YHGd4ZakN6UWjU/edit?usp=sharing" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;transition:background 0.2s;"
+                onmouseover="this.style.background='var(--blue-dark)'" onmouseout="this.style.background='var(--blue)'">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                통합 대시보드 보기 →
+              </a>
+            </div>
+          </div>
+          <div class="project-tools" style="margin-top:14px;">
             <span class="tag tag-gray">Meta Ads</span><span class="tag tag-gray">Google Ads</span><span class="tag tag-gray">Naver SA</span><span class="tag tag-gray">네이버 스마트스토어</span><span class="tag tag-gray">카페24</span><span class="tag tag-gray">Kakaotalk</span>
           </div>
         </div>
@@ -918,14 +1020,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="par-item">
               <div class="par-label">Action</div>
-              <div class="par-content">이벤트 시간 · 참여 인원 · 리워드 금액 · 지속 시간 ·<br />구간 · 이탈 구간 · 이벤트 구조 등<br /><strong>7개 변수</strong> 가설화 및 단계적 검증</div>
+              <div class="par-content"><strong>7개 변수</strong> 가설화 및 GA·Appsflyer 기반 단계적 검증</div>
             </div>
             <div class="par-item">
               <div class="par-label">Result</div>
               <div class="par-content">3개월 운영<br /><strong style="color:var(--blue)">D+1 재방문 143% ▲</strong></div>
             </div>
           </div>
-          <div class="project-tools">
+
+          <!-- 7개 변수 검증 표 -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px;">검증 변수 · 가설 및 테스트 방향</p>
+            <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:12px;">
+              <div style="display:grid;grid-template-columns:100px 1fr;background:var(--blue-light);border-bottom:1px solid var(--border);">
+                <div style="padding:8px 12px;font-weight:700;color:var(--blue);text-align:center;">검증 변수</div>
+                <div style="padding:8px 12px;font-weight:700;color:var(--blue);">가설 및 테스트 방향</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:#fff;">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">이벤트 시간</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">시간대별 전환율 비교 분석</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:var(--bg-soft);">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">참여 인원</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">인원 확대 A/B 테스트 (소규모 → 전체 공개)</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:#fff;">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">리워드 금액</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">금액 구간별 전환율 측정 및 최적 구간 도출</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:var(--bg-soft);">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">지속 시간</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">이벤트 지속 기간 변경 후 전환율 비교</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:#fff;">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">리워드 구간</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">구간 세분화 효과 검증 (단일 vs 복수 선택)</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;border-bottom:1px solid var(--border);background:var(--bg-soft);">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">이탈 구간</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">GA · Appsflyer 단계별 이탈 구간 특정</div>
+              </div>
+              <div style="display:grid;grid-template-columns:100px 1fr;background:#fff;">
+                <div style="padding:8px 12px;color:var(--text-mid);text-align:center;font-weight:600;border-right:1px solid var(--border);">이벤트 구조</div>
+                <div style="padding:8px 12px;color:var(--text-mid);">참여 흐름 개선안 도출 및 구조 반영</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-tools" style="margin-top:16px;">
             <span class="tag tag-gray">GA</span><span class="tag tag-gray">Appsflyer</span><span class="tag tag-gray">App Store Connect</span><span class="tag tag-gray">Meta Ads</span><span class="tag tag-gray">Google Ads</span>
           </div>
         </div>
@@ -963,7 +1105,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="par-content">일반 발송 대비<br /><strong style="color:var(--blue)">발송건당 매출 463% ▲</strong></div>
             </div>
           </div>
-          <div class="project-tools">
+          <!-- 6단계 고객여정 플로우맵 -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">고객 여정 6단계 설계</p>
+            <div style="display:flex;align-items:center;gap:0;overflow-x:auto;padding-bottom:4px;">
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:var(--blue-light);border:2px solid var(--blue);border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">🔍</div>
+                  <div style="font-size:10px;font-weight:700;color:var(--blue);margin-top:2px;">유입</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">광고 클릭<br/>첫 방문</div>
+              </div>
+              <div style="color:var(--blue);font-size:16px;font-weight:700;margin:0 2px;padding-bottom:20px;">→</div>
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:var(--blue-light);border:2px solid var(--blue);border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">👀</div>
+                  <div style="font-size:10px;font-weight:700;color:var(--blue);margin-top:2px;">조회</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">상품 탐색<br/>장바구니 전</div>
+              </div>
+              <div style="color:var(--blue);font-size:16px;font-weight:700;margin:0 2px;padding-bottom:20px;">→</div>
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:var(--blue-light);border:2px solid var(--blue);border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">🛒</div>
+                  <div style="font-size:10px;font-weight:700;color:var(--blue);margin-top:2px;">고려</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">장바구니<br/>담기</div>
+              </div>
+              <div style="color:var(--blue);font-size:16px;font-weight:700;margin:0 2px;padding-bottom:20px;">→</div>
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:var(--blue);border:2px solid var(--blue);border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">✅</div>
+                  <div style="font-size:10px;font-weight:700;color:#fff;margin-top:2px;">첫구매</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">첫 구매<br/>완료</div>
+              </div>
+              <div style="color:var(--blue);font-size:16px;font-weight:700;margin:0 2px;padding-bottom:20px;">→</div>
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:var(--blue);border:2px solid var(--blue);border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">🔄</div>
+                  <div style="font-size:10px;font-weight:700;color:#fff;margin-top:2px;">재구매</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">반복 구매<br/>로열 고객</div>
+              </div>
+              <div style="color:#EF4444;font-size:16px;font-weight:700;margin:0 2px;padding-bottom:20px;">→</div>
+              <div style="display:flex;flex-direction:column;align-items:center;min-width:70px;">
+                <div style="background:#FEF2F2;border:2px solid #EF4444;border-radius:8px;padding:8px 6px;text-align:center;width:66px;">
+                  <div style="font-size:14px;">⚠️</div>
+                  <div style="font-size:10px;font-weight:700;color:#EF4444;margin-top:2px;">이탈</div>
+                </div>
+                <div style="font-size:9px;color:var(--text-light);margin-top:4px;text-align:center;">미접속<br/>N일 경과</div>
+              </div>
+            </div>
+
+            <!-- 시나리오 표 -->
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-top:18px;margin-bottom:10px;">시나리오 기획 예시</p>
+            <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:12px;">
+              <div style="display:grid;grid-template-columns:80px 1fr 1fr 100px;background:var(--blue-light);border-bottom:1px solid var(--border);">
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">단계</div>
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">조건</div>
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">메시지 주제</div>
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">타입</div>
+              </div>
+              <div style="display:grid;grid-template-columns:80px 1fr 1fr 100px;border-bottom:1px solid var(--border);background:#fff;">
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">고려</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">장바구니 상품 보유 유저</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">제품 프로모션</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">할인 / 증정</div>
+              </div>
+              <div style="display:grid;grid-template-columns:80px 1fr 1fr 100px;border-bottom:1px solid var(--border);background:var(--bg-soft);">
+                <div style="padding:8px 10px;font-weight:700;color:var(--blue);">첫구매</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">구매액 N원 이상 유저</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">신규 제품 런칭</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">정보 / 할인</div>
+              </div>
+              <div style="display:grid;grid-template-columns:80px 1fr 1fr 100px;background:#fff;">
+                <div style="padding:8px 10px;font-weight:700;color:#EF4444;">이탈</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">미접속 N일 경과 유저</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">재방문 유도</div>
+                <div style="padding:8px 10px;color:var(--text-mid);">쿠폰 / 할인</div>
+              </div>
+            </div>
+            <div style="margin-top:6px;font-size:11px;color:var(--text-light);">· Raw data 수동 가공 세그먼트 구현 &nbsp;·&nbsp; UTM·GA 시나리오별 전환 추적 구조 구축</div>
+          </div>
+          <div class="project-tools" style="margin-top:14px;">
             <span class="tag tag-gray">카페24</span><span class="tag tag-gray">Kakaotalk</span><span class="tag tag-gray">Spreadsheet</span><span class="tag tag-gray">UTM</span>
           </div>
         </div>
@@ -1001,7 +1226,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="par-content">카카오 오픈율 29%<br />(앱 푸시 평균 18% 대비)<br /><strong style="color:var(--blue)">오픈수 70% ▲</strong></div>
             </div>
           </div>
-          <div class="project-tools">
+          <!-- 3차 개선 타임라인 -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">3차 단계별 시스템 고도화</p>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <div style="min-width:28px;height:28px;background:var(--blue-soft);border:2px solid var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--blue);">1</div>
+                <div style="flex:1;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12px;font-weight:700;color:var(--text-dark);margin-bottom:3px;">CRM 운영 대시보드 구축</div>
+                  <div style="font-size:11px;color:var(--text-light);">발송 모수·오픈수·전환 추적 가능한 성과 측정 구조 최초 구축</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <div style="min-width:28px;height:28px;background:var(--blue);border:2px solid var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">2</div>
+                <div style="flex:1;background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:3px;">A/B 테스트 실행 → 오픈율 +15% · 오픈수 +70%</div>
+                  <div style="font-size:11px;color:var(--text-mid);">마감 강조 메시지 조합 테스트로 최적 발송 패턴 도출</div>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <div style="min-width:28px;height:28px;background:var(--blue);border:2px solid var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;">3</div>
+                <div style="flex:1;background:var(--blue-light);border:1px solid var(--blue-soft);border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:3px;">카카오톡 채널 신규 도입 → 오픈율 29%</div>
+                  <div style="font-size:11px;color:var(--text-mid);">앱 푸시 평균 18% 대비 카카오 채널이 유의미하게 높은 오픈율 달성</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:12px;">
+              <a href="https://docs.google.com/spreadsheets/d/1r8iOYAOHcjlLyl0S2B0UaYe9T1gAuq7VahUymCU4MmA/edit?usp=sharing" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;transition:background 0.2s;"
+                onmouseover="this.style.background='var(--blue-dark)'" onmouseout="this.style.background='var(--blue)'">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                CRM 대시보드 보기 →
+              </a>
+            </div>
+          </div>
+          <div class="project-tools" style="margin-top:14px;">
             <span class="tag tag-gray">Kakaotalk</span><span class="tag tag-gray">GA</span><span class="tag tag-gray">Firebase</span><span class="tag tag-gray">Spreadsheet</span>
           </div>
         </div>
@@ -1057,8 +1317,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
           </div>
+          <!-- GA4 트래킹 세팅 스크린샷 -->
+          <div style="margin-top:18px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px;">GA4 트래킹 세팅 실제 화면</p>
+            <div style="border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <img src="assets/리인벤팅-GA4.png" alt="리인벤팅 GA4 트래킹 세팅" style="width:100%;display:block;" />
+            </div>
+            <p style="font-size:11px;color:var(--text-light);margin-top:6px;">채널 그룹별 신규 사용자 획득 현황 — 매체 연동 후 Paid Social, Direct 중심 유입 구조 확인</p>
+          </div>
           <div class="project-tools" style="margin-top:16px">
             <span class="tag tag-gray">Figma</span><span class="tag tag-gray">GTM</span><span class="tag tag-gray">GA4</span><span class="tag tag-gray">Meta</span><span class="tag tag-gray">Slack</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- P8 -->
+      <div class="project-card fade-in" data-category="owned">
+        <div class="project-header" onclick="toggleProject(this)">
+          <div class="project-header-left">
+            <div class="project-company">(주)아이에이치큐 · OTT 서비스</div>
+            <div class="project-title">온드미디어 채널 운영 · 온라인 이벤트 기획</div>
+          </div>
+          <div class="project-result-badge">최고 484만 뷰 · 구독 30만</div>
+          <div class="chevron">›</div>
+        </div>
+        <div class="project-meta"><span class="tag tag-gray">온드미디어</span><span class="tag tag-gray">콘텐츠</span></div>
+        <div class="project-body">
+          <div class="par-grid">
+            <div class="par-item">
+              <div class="par-label">Problem</div>
+              <div class="par-content">신규 서비스 인지도 증진 및 유저 유입 프로모션 기획<br />→ 예산·전담 인력 없이 바이럴 채널 필요</div>
+            </div>
+            <div class="par-item">
+              <div class="par-label">Action</div>
+              <div class="par-content">
+                <ul>
+                  <li>2040세대 유입을 위한 바이럴 채널 컨셉 기획 및 콘텐츠 제작 단독 수행</li>
+                  <li>인앱 진입 유도 프로세스 설계 및 운영</li>
+                  <li>시즌별 이벤트 (설날·런칭 기념 등) 기획·집행</li>
+                </ul>
+              </div>
+            </div>
+            <div class="par-item">
+              <div class="par-label">Result</div>
+              <div class="par-content">
+                <strong style="color:var(--blue)">최고 조회수 484만 회</strong><br />
+                런칭 7개월차 구독자 30만 명 달성<br />
+                자사 서비스 비즈니스 모델 결정 기여<br />
+                타 방송국 마케팅 협업 요청 수신
+              </div>
+            </div>
+          </div>
+
+          <!-- 유튜브 채널 링크 영역 -->
+          <div style="margin-top:20px;">
+            <p style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);margin-bottom:12px;">채널 바로가기</p>
+            <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+              <a href="https://www.youtube.com/@bdg_mdg" target="_blank" rel="noopener"
+                style="display:inline-flex;align-items:center;gap:8px;background:#FF0000;color:#fff;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;text-decoration:none;transition:opacity 0.2s;"
+                onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                유튜브 채널 보기 →
+              </a>
+              <div style="display:flex;gap:16px;">
+                <div style="text-align:center;">
+                  <div style="font-size:20px;font-weight:800;color:var(--blue);">484만</div>
+                  <div style="font-size:10px;color:var(--text-light);">최고 조회수</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="font-size:20px;font-weight:800;color:var(--blue);">30만</div>
+                  <div style="font-size:10px;color:var(--text-light);">7개월 구독자</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-tools" style="margin-top:16px;">
+            <span class="tag tag-gray">Youtube</span><span class="tag tag-gray">Premiere Pro</span><span class="tag tag-gray">Figma</span><span class="tag tag-gray">Slack</span>
           </div>
         </div>
       </div>
